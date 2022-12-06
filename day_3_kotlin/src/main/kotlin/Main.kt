@@ -7,11 +7,12 @@ fun itemPriority(item: Char) = when (item.isUpperCase()) {
 
 fun rucksackPrioritySum(rucksackContents: String): Int {
     val compartments = rucksackContents.chunked(rucksackContents.length / 2)
-    return itemPriority(compartments
-        .first()
-        .asSequence()
-        .find { compartments.last().contains(it) }
-        ?: throw Exception("Something wrong with the rucksack"))
+    return itemPriority(
+        compartments
+            .first()
+            .asSequence()
+            .find { compartments.last().contains(it) }
+            ?: throw Exception("Something wrong with the rucksack"))
 }
 
 fun partOne(): Int {
