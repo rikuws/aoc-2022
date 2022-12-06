@@ -1,3 +1,4 @@
+import arrow.core.None
 import java.io.File
 
 tailrec fun asGroups(lines: List<String>, accGroup: List<List<String>> = emptyList()): List<List<String>> {
